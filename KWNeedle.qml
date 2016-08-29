@@ -7,7 +7,7 @@ Canvas {
     property int value : 0
 
     onValueChanged: {zeiger.rotation = Math.min(Math.max(10, canvas.value*3.5 - 90), 90); canvas.currentValue = zeiger.rotation - 90}
-        //90 minrotation, 10 maxrotation
+    //90 minrotation, 10 maxrotation
     width: parent.width; height: parent.height
 
 
@@ -25,16 +25,13 @@ Canvas {
         color: "#FFC73E"
         onRotationChanged: {canvas.currentValue = zeiger.rotation - 90; canvas.requestPaint()}
 
-            Behavior on rotation {
-                NumberAnimation{
-                    duration: 1000
-                            easing.type: Easing.OutExpo
-                }
+        Behavior on rotation {
+            NumberAnimation{
+                duration: 1000
+                easing.type: Easing.OutExpo
             }
+        }
     }
-
-
-
 
     antialiasing: true
 
@@ -54,14 +51,13 @@ Canvas {
     property real angle: (currentValue - minimumValue) / (maximumValue - minimumValue) * 2 * Math.PI + 0.0001
     property real angleOffset: Math.Pi//21.288 //to start at 0mph //-Math.PI / 2
 
-
     onPaint: {
-    //Magic
+        //Magic
         var ctx = getContext("2d");
         ctx.save();
 
         var gradient2 = ctx.createRadialGradient((parent.width / 2),(parent.height / 2), 500, (parent.width / 2),(parent.height / 2),5);
-         gradient2.addColorStop(0.5, "#FFB108");   //oben
+        gradient2.addColorStop(0.5, "#FFB108");   //oben
         gradient2.addColorStop(0.48, "#FFB108");   //oben
         gradient2.addColorStop(0.47, "#682E00");   //mitte
         gradient2.addColorStop(0.33, "transparent");   //unten
@@ -75,7 +71,5 @@ Canvas {
         ctx.stroke();
 
         ctx.restore();
-
     }
 }
-

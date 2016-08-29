@@ -123,5 +123,3 @@ Rectangle {
         id: deanimateWindow; target: appWindow; properties: "opacity"; from: 1.00; to: 0.0; duration: 500
     }
 }
-
-

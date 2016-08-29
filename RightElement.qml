@@ -28,19 +28,19 @@ Rectangle {
 
     Timer {
         //update Calltime, calculate 60 seconds into 1 minute etc.
-           interval: 1000; running: true; repeat: true
-           onTriggered: {seconds++;
+        interval: 1000; running: true; repeat: true
+        onTriggered: {
+            seconds++;
 
-           if(seconds == 10){
-               tenseconds += 1
-               seconds = 0
-           }
-           if(seconds == 0 && tenseconds==6){
-               minutes += 1
-               seconds = 0
-               tenseconds = 0
-           }
-           }
-       }
+            if(seconds == 10){
+                tenseconds += 1
+                seconds = 0
+            }
+            if(seconds == 0 && tenseconds == 6){
+                minutes += 1
+                seconds = 0
+                tenseconds = 0
+            }
+        }
+    }
 }
-
