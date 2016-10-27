@@ -48,7 +48,7 @@ Canvas {
     // first arc is drawn from 0 radians to angle radians
     // second arc is angle radians to 2*PI radians
     property real angle: (currentValue - minimumValue) / (maximumValue - minimumValue) * 2 * Math.PI + 0.01
-    property real angleOffset: 20.955 //to start at 0mph //-Math.PI / 2
+    property real angleOffset: 20.955 //to start at 0 kmh/mph //-Math.PI / 2
 
     onPaint: {
         var ctx = getContext("2d");

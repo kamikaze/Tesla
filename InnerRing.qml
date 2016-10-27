@@ -38,7 +38,7 @@ Item {
              }
 
          Text {
-             text: "mph"
+             text: "km/h"
              font.pixelSize: 16
              font.bold: true
              font.family: "Eurostile"
