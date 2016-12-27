@@ -126,7 +126,7 @@ ApplicationWindow {
         height: parent.height
         width: height
         x: (parent.width / 2) - (width / 2)
-        scale: 1.14
+        scale: 1
         source: "/pics/Tacho.png"
         fillMode: Image.PreserveAspectFit
     }
